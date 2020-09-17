@@ -3,6 +3,7 @@ import mimetypes
 from django.shortcuts import render, redirect
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
+from django.http import Http404
 
 from django.views import View
 
@@ -14,7 +15,7 @@ class PortfolioView(View):
     def get(self, request):
         try:
             cv = CV.objects.get(id=1)
-        except MyModel.DoesNotExist:
+        except:
             raise Http404("No MyModel matches the given query.")
         return render(request, 'portfolio/portfolio.html', {'file':cv})
 
