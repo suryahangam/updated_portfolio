@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '4ogs&k21&%3%mlt=@r4(xs8=1-f!k07b762ws@_z#zxqq60*^@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['suryahangam.pythonanywhere.com']
 
