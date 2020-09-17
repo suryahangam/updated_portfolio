@@ -86,6 +86,12 @@ class CV(models.Model):
     class Meta:
         verbose_name_plural = 'CV'
 
+    @property
+    def get_file(self):
+        filename = self.cv_file.name.split('.')
+        return filename[0], filename[1]
+        
+
 
 class ContactForm(models.Model):
     name = models.CharField(max_length=50)
