@@ -10,14 +10,9 @@ from django.views import View
 from portfolio_manager.models import *
 
 
-
 class PortfolioView(View):
     def get(self, request):
-        try:
-            cv = CV.objects.get(id=1)
-        except:
-            raise Http404("No MyModel matches the given query.")
-        return render(request, 'portfolio/portfolio.html', {'file':cv})
+        return render(request, 'portfolio/portfolio.html')
 
 
 class FileDownloadView(View):
